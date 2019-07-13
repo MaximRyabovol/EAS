@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:goszakaz/widgets/company_card.dart';
+import 'package:goszakaz/widgets/search_field.dart';
 
 class MembersListScreen extends StatefulWidget {
   static final String membersListScreenId = '/membersListScreen';
@@ -20,30 +21,119 @@ class _MembersListScreenState extends State<MembersListScreen> {
         ),
         backgroundColor: Color(0xFF00B2FF),
       ),
-      body: Container(
-        color: Colors.white,
-        child: ListView(
+      body: Center(
+        child: Padding(
           padding: EdgeInsets.all(24.0),
-          children: <Widget>[
-            CompanyCard(
-              companyName: 'ООО "Рога и Копыта"',
-              adress: 'г. Хабаровск, ул. Тихоокеанская 150',
-              founder: 'Иванов Василий',
-              specialization:
-                  'Торговля продуктами питания, жидкими супами и т.д.',
-              inn: '1234567890',
-              ogrn: '1234567890987',
-              okpo: '1234567',
-              rating: 8.7,
-            ),
-            Text('Контракт !'),
-            Text('Контракт !'),
-            Text('Контракт !'),
-            Text('Контракт !'),
-            Text('Контракт !'),
-            Text('Контракт !'),
-            Text('Контракт !'),
-          ],
+          child: Column(
+            children: <Widget>[
+              SearchField(
+                hintText: '',
+                icon: Icons.clear,
+              ),
+              SizedBox(
+                height: 24.0,
+              ),
+              CompanyCard(
+                companyName: 'ООО "Рога и Копыта"',
+                adress: 'г. Хабаровск, ул. Тихоокеанская 150',
+                founder: 'Иванов Василий',
+                specialization:
+                    'Торговля продуктами питания, жидкими супами и т.д.',
+                inn: '1234567890',
+                ogrn: '1234567890987',
+                okpo: '1234567',
+                rating: 8.7,
+              ),
+              CompanyCard(
+                companyName: 'ООО "Рога и Копыта"',
+                adress: 'г. Хабаровск, ул. Тихоокеанская 150',
+                founder: 'Иванов Василий',
+                specialization:
+                    'Торговля продуктами питания, жидкими супами и т.д.',
+                inn: '1234567890',
+                ogrn: '1234567890987',
+                okpo: '1234567',
+                rating: 8.7,
+              ),
+              CompanyCard(
+                companyName: 'ООО "Рога и Копыта"',
+                adress: 'г. Хабаровск, ул. Тихоокеанская 150',
+                founder: 'Иванов Василий',
+                specialization:
+                    'Торговля продуктами питания, жидкими супами и т.д.',
+                inn: '1234567890',
+                ogrn: '1234567890987',
+                okpo: '1234567',
+                rating: 8.7,
+              ),
+              CompanyCard(
+                companyName: 'ООО "Рога и Копыта"',
+                adress: 'г. Хабаровск, ул. Тихоокеанская 150',
+                founder: 'Иванов Василий',
+                specialization:
+                    'Торговля продуктами питания, жидкими супами и т.д.',
+                inn: '1234567890',
+                ogrn: '1234567890987',
+                okpo: '1234567',
+                rating: 8.7,
+              ),
+              CompanyCard(
+                companyName: 'ООО "Рога и Копыта"',
+                adress: 'г. Хабаровск, ул. Тихоокеанская 150',
+                founder: 'Иванов Василий',
+                specialization:
+                    'Торговля продуктами питания, жидкими супами и т.д.',
+                inn: '1234567890',
+                ogrn: '1234567890987',
+                okpo: '1234567',
+                rating: 8.7,
+              ),
+              CompanyCard(
+                companyName: 'ООО "Рога и Копыта"',
+                adress: 'г. Хабаровск, ул. Тихоокеанская 150',
+                founder: 'Иванов Василий',
+                specialization:
+                    'Торговля продуктами питания, жидкими супами и т.д.',
+                inn: '1234567890',
+                ogrn: '1234567890987',
+                okpo: '1234567',
+                rating: 8.7,
+              ),
+              CompanyCard(
+                companyName: 'ООО "Рога и Копыта"',
+                adress: 'г. Хабаровск, ул. Тихоокеанская 150',
+                founder: 'Иванов Василий',
+                specialization:
+                    'Торговля продуктами питания, жидкими супами и т.д.',
+                inn: '1234567890',
+                ogrn: '1234567890987',
+                okpo: '1234567',
+                rating: 8.7,
+              ),
+              CompanyCard(
+                companyName: 'ООО "Рога и Копыта"',
+                adress: 'г. Хабаровск, ул. Тихоокеанская 150',
+                founder: 'Иванов Василий',
+                specialization:
+                    'Торговля продуктами питания, жидкими супами и т.д.',
+                inn: '1234567890',
+                ogrn: '1234567890987',
+                okpo: '1234567',
+                rating: 8.7,
+              ),
+              CompanyCard(
+                companyName: 'ООО "Рога и Копыта"',
+                adress: 'г. Хабаровск, ул. Тихоокеанская 150',
+                founder: 'Иванов Василий',
+                specialization:
+                    'Торговля продуктами питания, жидкими супами и т.д.',
+                inn: '1234567890',
+                ogrn: '1234567890987',
+                okpo: '1234567',
+                rating: 8.7,
+              ),
+            ],
+          ),
         ),
       ),
     );
