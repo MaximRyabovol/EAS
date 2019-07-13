@@ -12,11 +12,16 @@ class _AuthorizationScreenState extends State<AuthorizationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: Padding(
-        padding: EdgeInsets.fromLTRB(24.0, 24.0, 24.0, 0.0),
-        child: Center(
-          child: Container(
+      body: Container(
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+          colors: [Color(0xFF00B2FF), Color(0xFF00FFFF)],
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+        )),
+        child: Padding(
+          padding: EdgeInsets.fromLTRB(24.0, 24.0, 24.0, 0.0),
+          child: Center(
             child: SingleChildScrollView(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -42,7 +47,38 @@ class _AuthorizationScreenState extends State<AuthorizationScreen> {
                       //Do something with the user input.
                     },
                     decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.white,
                       hintText: 'Логин',
+                      contentPadding: EdgeInsets.symmetric(
+                          vertical: 10.0, horizontal: 20.0),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white, width: 1.0),
+                        borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white, width: 2.0),
+                        borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 24.0,
+                  ),
+                  TextField(
+                    obscureText: true,
+                    keyboardType: TextInputType.emailAddress,
+                    textAlign: TextAlign.center,
+                    onChanged: (value) {
+                      //Do something with the user input.
+                    },
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.white,
+                      hintText: 'Пароль',
                       contentPadding: EdgeInsets.symmetric(
                           vertical: 10.0, horizontal: 20.0),
                       border: OutlineInputBorder(
@@ -63,35 +99,6 @@ class _AuthorizationScreenState extends State<AuthorizationScreen> {
                   SizedBox(
                     height: 24.0,
                   ),
-                  TextField(
-                    obscureText: true,
-                    keyboardType: TextInputType.emailAddress,
-                    textAlign: TextAlign.center,
-                    onChanged: (value) {
-                      //Do something with the user input.
-                    },
-                    decoration: InputDecoration(
-                      hintText: 'Пароль',
-                      contentPadding: EdgeInsets.symmetric(
-                          vertical: 10.0, horizontal: 20.0),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(32.0)),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
-                            color: Colors.lightBlueAccent, width: 1.0),
-                        borderRadius: BorderRadius.all(Radius.circular(32.0)),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
-                            color: Colors.lightBlueAccent, width: 2.0),
-                        borderRadius: BorderRadius.all(Radius.circular(32.0)),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 48.0,
-                  ),
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: 16.0),
                     child: Material(
@@ -109,6 +116,7 @@ class _AuthorizationScreenState extends State<AuthorizationScreen> {
                           'Авторизоваться',
                           style: TextStyle(
                             color: Colors.white,
+                            fontSize: 18.0,
                           ),
                         ),
                       ),

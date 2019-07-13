@@ -10,9 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.amber,
-      ),
+      theme: ThemeData(),
       initialRoute: AuthorizationScreen.authorizationScreenId,
       routes: {
         MembersListScreen.membersListScreenId: (context) => MembersListScreen(),

@@ -10,7 +10,22 @@ class _MembersListScreenState extends State<MembersListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+      ),
+      body: ListView(
+        padding: EdgeInsets.all(24.0),
+        children: <Widget>[
+          Text('Контракт !'),
+          Text('Контракт !'),
+          Text('Контракт !'),
+          Text('Контракт !'),
+          Text('Контракт !'),
+          Text('Контракт !'),
+          Text('Контракт !'),
+          Text('Контракт !'),
+        ],
+      ),
     );
   }
 }
