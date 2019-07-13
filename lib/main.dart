@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'screens/membrs_list_screen.dart';
 import 'screens/authorization_screen.dart';
 import 'screens/membrs_list_screen.dart';
+import 'screens/search_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -15,7 +16,8 @@ class MyApp extends StatelessWidget {
       routes: {
         MembersListScreen.membersListScreenId: (context) => MembersListScreen(),
         AuthorizationScreen.authorizationScreenId: (context) =>
-            AuthorizationScreen()
+            AuthorizationScreen(),
+        SearchScreen.searchScreenId: (context) => SearchScreen(),
       },
     );
   }

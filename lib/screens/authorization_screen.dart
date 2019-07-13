@@ -1,3 +1,4 @@
+import 'package:goszakaz/screens/search_screen.dart';
 import 'package:goszakaz/screens/membrs_list_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -108,7 +109,9 @@ class _AuthorizationScreenState extends State<AuthorizationScreen> {
                       child: MaterialButton(
                         onPressed: () {
                           Navigator.pushNamed(
-                              context, MembersListScreen.membersListScreenId);
+                            context,
+                            SearchScreen.searchScreenId,
+                          );
                         },
                         minWidth: 200.0,
                         height: 42.0,
