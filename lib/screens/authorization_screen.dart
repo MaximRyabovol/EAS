@@ -15,11 +15,15 @@ class _AuthorizationScreenState extends State<AuthorizationScreen> {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
-            gradient: LinearGradient(
-          colors: [Color(0xFF00B2FF), Color(0xFF00FFFF)],
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-        )),
+          gradient: LinearGradient(
+            colors: [
+              Color(0xFF00B2FF),
+              Color(0xFF00FFFF),
+            ],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+          ),
+        ),
         child: Padding(
           padding: EdgeInsets.fromLTRB(24.0, 24.0, 24.0, 0.0),
           child: Center(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:goszakaz/screens/loading_screen.dart';
+import 'package:goszakaz/screens/membrs_list_screen.dart';
 
 class SearchScreen extends StatefulWidget {
   static final String searchScreenId = '/search';
@@ -43,21 +44,21 @@ class _SearchScreenState extends State<SearchScreen> {
                   TextField(
                     onSubmitted: (value) {
                       Navigator.pushNamed(
-                        context,
-                        LoadingScreen.loadingScreenId,
-                      );
+                          context,
+                          //LoadingScreen.loadingScreenId); //todo enable it!!!
+                          MembersListScreen.membersListScreenId);
                     },
                     onEditingComplete: () {
                       Navigator.pushNamed(
-                          context, LoadingScreen.loadingScreenId);
+                          context,
+                          //LoadingScreen.loadingScreenId); //todo enable it!!!
+                          MembersListScreen.membersListScreenId);
                     },
                     keyboardType: TextInputType.text,
                     textAlign: TextAlign.center,
-                    onChanged: (value) {},
                     decoration: InputDecoration(
-                      icon: Icon(
+                      suffixIcon: Icon(
                         Icons.search,
-                        textDirection: TextDirection.rtl,
                       ),
                       filled: true,
                       fillColor: Colors.white,
