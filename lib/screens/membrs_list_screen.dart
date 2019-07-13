@@ -14,6 +14,7 @@ class _MembersListScreenState extends State<MembersListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(),
       appBar: AppBar(
         title: Text(
           'ЕАС',
@@ -146,18 +147,21 @@ class _MembersListScreenState extends State<MembersListScreen> {
               height: 70.0,
               decoration: kThemeGradient,
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
-                  BottomIcon(icon: Icons.menu),
-                  Spacer(),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      BottomIcon(icon: Icons.sort_by_alpha),
-                      BottomIcon(
-                        icon: Icons.sort,
-                      )
-                    ],
-                  )
+                  /*BottomIcon(
+                    icon: Icons.menu,
+                  ),*/
+                  BottomIcon(
+                    icon: Icons.shopping_cart,
+                  ),
+                  BottomIcon(
+                    icon: Icons.sort_by_alpha,
+                  ),
+                  BottomIcon(
+                    icon: Icons.sort,
+                  ),
                 ],
               ),
             ),
