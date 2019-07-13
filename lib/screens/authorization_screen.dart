@@ -1,6 +1,7 @@
 import 'package:goszakaz/screens/search_screen.dart';
 import 'package:goszakaz/screens/membrs_list_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:goszakaz/constants.dart';
 
 class AuthorizationScreen extends StatefulWidget {
   static final String authorizationScreenId = '/';
@@ -14,16 +15,7 @@ class _AuthorizationScreenState extends State<AuthorizationScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              Color(0xFF00B2FF),
-              Color(0xFF00FFFF),
-            ],
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-          ),
-        ),
+        decoration: kThemeGradient,
         child: Padding(
           padding: EdgeInsets.fromLTRB(24.0, 24.0, 24.0, 0.0),
           child: Center(

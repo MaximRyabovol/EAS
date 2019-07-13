@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:goszakaz/widgets/company_card.dart';
 import 'package:goszakaz/widgets/search_field.dart';
+import 'package:goszakaz/constants.dart';
+import 'package:goszakaz/widgets/bottom_icon.dart';
 
 class MembersListScreen extends StatefulWidget {
   static final String membersListScreenId = '/membersListScreen';
@@ -25,7 +27,7 @@ class _MembersListScreenState extends State<MembersListScreen> {
         child: Column(
           children: <Widget>[
             Padding(
-              padding: EdgeInsets.all(24.0),
+              padding: EdgeInsets.fromLTRB(24.0, 24.0, 24.0, 12.0),
               child: SearchField(
                 hintText: '',
                 icon: Icons.clear,
@@ -33,7 +35,7 @@ class _MembersListScreenState extends State<MembersListScreen> {
             ),
             Flexible(
               child: Padding(
-                padding: EdgeInsets.fromLTRB(24.0, 0.0, 24.0, 24.0),
+                padding: EdgeInsets.fromLTRB(24.0, 0.0, 24.0, 0.0),
                 child: ListView(
                   children: <Widget>[
                     CompanyCard(
@@ -138,7 +140,27 @@ class _MembersListScreenState extends State<MembersListScreen> {
                   ],
                 ),
               ),
-            )
+            ),
+            Container(
+              width: double.infinity,
+              height: 70.0,
+              decoration: kThemeGradient,
+              child: Row(
+                children: <Widget>[
+                  BottomIcon(icon: Icons.menu),
+                  Spacer(),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      BottomIcon(icon: Icons.sort_by_alpha),
+                      BottomIcon(
+                        icon: Icons.sort,
+                      )
+                    ],
+                  )
+                ],
+              ),
+            ),
           ],
         ),
       ),
