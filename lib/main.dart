@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'screens/membrs_list_screen.dart';
+import 'screens/authorization_screen.dart';
+import 'screens/membrs_list_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,7 +13,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.amber,
       ),
-      home: MembersListScreen(),
+      initialRoute: AuthorizationScreen.authorizationScreenId,
+      routes: {
+        MembersListScreen.membersListScreenId: (context) => MembersListScreen(),
+        AuthorizationScreen.authorizationScreenId: (context) =>
+            AuthorizationScreen()
+      },
     );
   }
 }
