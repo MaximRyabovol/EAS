@@ -3,6 +3,7 @@ import 'package:goszakaz/widgets/company_card.dart';
 import 'package:goszakaz/widgets/search_field.dart';
 import 'package:goszakaz/constants.dart';
 import 'package:goszakaz/widgets/bottom_icon.dart';
+import 'package:goszakaz/widgets/main_drawer.dart';
 
 class MembersListScreen extends StatefulWidget {
   static final String membersListScreenId = '/membersListScreen';
@@ -14,7 +15,7 @@ class _MembersListScreenState extends State<MembersListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(),
+      drawer: MainDrawer(),
       appBar: AppBar(
         title: Text(
           'ЕАС',
