@@ -3,6 +3,7 @@ import 'screens/membrs_list_screen.dart';
 import 'screens/authorization_screen.dart';
 import 'screens/membrs_list_screen.dart';
 import 'screens/search_screen.dart';
+import 'screens/loading_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
         AuthorizationScreen.authorizationScreenId: (context) =>
             AuthorizationScreen(),
         SearchScreen.searchScreenId: (context) => SearchScreen(),
+        LoadingScreen.loadingScreenId: (context) => LoadingScreen(),
       },
     );
   }

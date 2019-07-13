@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:goszakaz/screens/membrs_list_screen.dart';
+import 'package:goszakaz/screens/loading_screen.dart';
 
 class SearchScreen extends StatefulWidget {
   static final String searchScreenId = '/search';
@@ -41,15 +41,24 @@ class _SearchScreenState extends State<SearchScreen> {
                     height: 24.0,
                   ),
                   TextField(
-                    obscureText: true,
-                    keyboardType: TextInputType.emailAddress,
-                    textAlign: TextAlign.center,
-                    onChanged: (value) {
-                      //Do something with the user input.
-                      //todo make request
+                    onSubmitted: (value) {
+                      Navigator.pushNamed(
+                        context,
+                        LoadingScreen.loadingScreenId,
+                      );
                     },
+                    onEditingComplete: () {
+                      Navigator.pushNamed(
+                          context, LoadingScreen.loadingScreenId);
+                    },
+                    keyboardType: TextInputType.text,
+                    textAlign: TextAlign.center,
+                    onChanged: (value) {},
                     decoration: InputDecoration(
-                      icon: Icon(Icons.search),
+                      icon: Icon(
+                        Icons.search,
+                        textDirection: TextDirection.rtl,
+                      ),
                       filled: true,
                       fillColor: Colors.white,
                       hintText: 'ИНН, ОГРН, наименование, номер гос.контракта',
