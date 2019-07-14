@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:goszakaz/screens/membrs_list_screen.dart';
 import 'package:goszakaz/screens/loading_screen.dart';
 import 'package:goszakaz/widgets/search_field.dart';
+import 'package:goszakaz/services/net_working.dart';
 
 class SearchField extends StatelessWidget {
   final String hintText;
@@ -17,14 +18,12 @@ class SearchField extends StatelessWidget {
     return TextField(
       onSubmitted: (value) {
         Navigator.pushNamed(
-            context,
-            //LoadingScreen.loadingScreenId); //todo enable it!!!
+            context, //LoadingScreen.loadingScreenId); //todo enable it!!!
             MembersListScreen.membersListScreenId);
       },
       onEditingComplete: () {
         Navigator.pushNamed(
-            context,
-            //LoadingScreen.loadingScreenId); //todo enable it!!!
+            context, //LoadingScreen.loadingScreenId); //todo enable it!!!
             MembersListScreen.membersListScreenId);
       },
       keyboardType: TextInputType.text,

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:goszakaz/screens/membrs_list_screen.dart';
 import 'package:goszakaz/services/companies.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:goszakaz/services/map_parser.dart';
 
 class LoadingScreen extends StatefulWidget {
   static final String loadingScreenId = '/LoadingScreen';
@@ -11,18 +12,24 @@ class LoadingScreen extends StatefulWidget {
 
 class _LoadingScreenState extends State<LoadingScreen> {
   void getCompaniesData() async {
-    var companiesData = await CompaniesModel().getCompanyList();
+    var companiesData = await CompaniesModel().getCompanyModel();
+    List<dynamic> list = companiesData['results'];
+
+    print(MapParser(list: list).getCompanyList());
+
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) {
-        return MembersListScreen();
+        return MembersListScreen(
+            //currentList: MapParser(list: list).getCompanyList(),
+            );
       }),
     );
   }
 
   @override
   void initState() {
-    //getCompaniesData(); //todo enable this
+    getCompaniesData(); //todo enable this
   }
 
   @override

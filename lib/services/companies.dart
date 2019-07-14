@@ -1,12 +1,11 @@
 import 'package:goszakaz/services/net_working.dart';
 
-const individualId = '???';
-const mainUrl = '???';
+const mainUrl = 'http://100.124.67.137:8000/entity/?format=json';
 
 class CompaniesModel {
-  Future<dynamic> getCompanyList() async {
-    NetWorkingHelper netWorkingHelper = NetWorkingHelper(url: mainUrl);
-    var netData = await netWorkingHelper.getData();
-    return netData;
+  Future<dynamic> getCompanyModel() async {
+    NetWorkingHelper netWorkingHelper = NetWorkingHelper(mainUrl);
+    var companyData = netWorkingHelper.getData();
+    return companyData;
   }
 }
