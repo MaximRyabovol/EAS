@@ -17,14 +17,12 @@ class SearchField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       onSubmitted: (value) {
-        Navigator.pushNamed(
-            context, //LoadingScreen.loadingScreenId); //todo enable it!!!
-            MembersListScreen.id);
+        Navigator.pushNamed(context, LoadingScreen.id); //todo enable it!!!
+        //MembersListScreen.id);
       },
       onEditingComplete: () {
-        Navigator.pushNamed(
-            context, //LoadingScreen.loadingScreenId); //todo enable it!!!
-            MembersListScreen.id);
+        Navigator.pushNamed(context, LoadingScreen.id); //todo enable it!!!
+        //MembersListScreen.id);
       },
       keyboardType: TextInputType.text,
       textAlign: TextAlign.center,

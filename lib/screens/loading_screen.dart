@@ -12,10 +12,11 @@ class LoadingScreen extends StatefulWidget {
 
 class _LoadingScreenState extends State<LoadingScreen> {
   void getCompaniesData() async {
-    var companiesData = await CompaniesModel().getCompanyModel();
-    List<dynamic> list = companiesData['results'];
-
-    print(MapParser(list: list).getCompanyList());
+    var delay = await Future.delayed(
+      Duration(
+        seconds: 2,
+      ),
+    );
 
     Navigator.push(
       context,
@@ -29,7 +30,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
 
   @override
   void initState() {
-    //getCompaniesData(); //todo enable this
+    getCompaniesData(); //todo enable this
   }
 
   @override
