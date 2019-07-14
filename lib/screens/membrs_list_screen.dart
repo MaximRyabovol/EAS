@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:goszakaz/widgets/company_card.dart';
 import 'package:goszakaz/widgets/search_field.dart';
 import 'package:goszakaz/constants.dart';
-import 'package:goszakaz/widgets/bottom_icon.dart';
+import 'package:goszakaz/widgets/bottom_button.dart';
 import 'package:goszakaz/widgets/main_drawer.dart';
+import 'package:goszakaz/screens/alphabet_sorting_screen.dart';
 
 class MembersListScreen extends StatefulWidget {
-  static final String membersListScreenId = '/membersListScreen';
+  static final String id = '/membersListScreen';
   //final List<CompanyCard> currentList;
 
   //MembersListScreen({this.currentList});
@@ -73,16 +74,14 @@ class _MembersListScreenState extends State<MembersListScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
-                  /*BottomIcon(
-                    icon: Icons.menu,
-                  ),*/
-                  BottomIcon(
+                  BottomButton(
                     icon: Icons.shopping_cart,
                   ),
-                  BottomIcon(
+                  BottomButton(
+                    screenId: AlphabetSortingScreen.id,
                     icon: Icons.sort_by_alpha,
                   ),
-                  BottomIcon(
+                  BottomButton(
                     icon: Icons.sort,
                   ),
                 ],

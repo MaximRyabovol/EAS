@@ -5,7 +5,7 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:goszakaz/services/map_parser.dart';
 
 class LoadingScreen extends StatefulWidget {
-  static final String loadingScreenId = '/LoadingScreen';
+  static final String id = '/LoadingScreen';
   @override
   _LoadingScreenState createState() => _LoadingScreenState();
 }
@@ -29,7 +29,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
 
   @override
   void initState() {
-    getCompaniesData(); //todo enable this
+    //getCompaniesData(); //todo enable this
   }
 
   @override

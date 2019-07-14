@@ -19,12 +19,12 @@ class SearchField extends StatelessWidget {
       onSubmitted: (value) {
         Navigator.pushNamed(
             context, //LoadingScreen.loadingScreenId); //todo enable it!!!
-            MembersListScreen.membersListScreenId);
+            MembersListScreen.id);
       },
       onEditingComplete: () {
         Navigator.pushNamed(
             context, //LoadingScreen.loadingScreenId); //todo enable it!!!
-            MembersListScreen.membersListScreenId);
+            MembersListScreen.id);
       },
       keyboardType: TextInputType.text,
       textAlign: TextAlign.center,

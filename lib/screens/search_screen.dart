@@ -4,7 +4,7 @@ import 'package:goszakaz/screens/membrs_list_screen.dart';
 import 'package:goszakaz/widgets/search_field.dart';
 
 class SearchScreen extends StatefulWidget {
-  static final String searchScreenId = '/search';
+  static final String id = '/search';
 
   @override
   _SearchScreenState createState() => _SearchScreenState();

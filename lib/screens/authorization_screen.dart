@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:goszakaz/constants.dart';
 
 class AuthorizationScreen extends StatefulWidget {
-  static final String authorizationScreenId = '/';
+  static final String id = '/';
   @override
   _AuthorizationScreenState createState() => _AuthorizationScreenState();
 }
@@ -106,7 +106,7 @@ class _AuthorizationScreenState extends State<AuthorizationScreen> {
                         onPressed: () {
                           Navigator.pushNamed(
                             context,
-                            SearchScreen.searchScreenId,
+                            SearchScreen.id,
                           );
                         },
                         minWidth: 200.0,
